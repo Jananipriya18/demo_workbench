@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Formats.Asn1;
 class Program
 {
     public static void Main()
     {
-        //Arithmetic Operators
-        int a= 10, b= 10;
-        Console.WriteLine("Arithmetic Operators:");
+        Console.WriteLine("Bitwise Operators");
+        // AND &
+
     }
 }
