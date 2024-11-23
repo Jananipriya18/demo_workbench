@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Formats.Asn1;
-class Program
-{
-    public static void Main()
+using System.Diagnostics.Metrics;
+class program{
+    static void Main()
     {
-        
+        Func<int,int,int> add = (a,b) => a+b;
     }
 }
