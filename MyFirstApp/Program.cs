@@ -4,13 +4,12 @@ class Program
 {
     public static void Main()
     {
-        int number = 100;
-        switch(number)
+        int i = 1;
+        do
         {
-            case 10:
-                Console.WriteLine("The number is 10");
-                break;
-            case 2
+            Console.WriteLine(i);
+            i++;
         }
+        while(i<= 0);
     }
 }
