@@ -4,12 +4,12 @@ class Program
 {
     public static void Main()
     {
-        int i = 1;
-        do
+        for(int i = 0;i<=5; i++)
         {
-            Console.WriteLine(i);
-            i++;
+            for(int j = 1; j<=5;j++){
+                Console.Write("* ");
+            }
+            Console.WriteLine("*");
         }
-        while(i<= 0);
     }
 }
