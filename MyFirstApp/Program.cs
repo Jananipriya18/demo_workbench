@@ -3,7 +3,6 @@
 class Program{
     public static void Main()
     {
-        List<string> shoppingList = new List<string> {"Milk","Eggs","Bread"};
-        
+        Stack<string> browserHistory = new
     }
 }
