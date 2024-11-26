@@ -1,11 +1,25 @@
 ﻿using System;
-namespace SimpleDelegateEventDemo
+
+namespace DelegateEventExample
 {
     public delegate void ButtonClickHandler();
+    class Button{
+        public event ButtonClickHandler ButtonClicked;
 
-    class Button 
-    {
-        
+        public void Click()
+        {
+            Console.WriteLine("Button was clicked!");
+            ButtonClicked?.Invoke();
+        }
     }
 
+    class Program
+    {
+        static void OnButtonClicked()
+        {
+            Console.WriteLine("Event triggered: ButtonClickHandler invoked!");
+        }
+
+        static void Main(string[])
+    }
 }
