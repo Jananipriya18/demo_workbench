@@ -31,11 +31,20 @@ namespace MultipleExceptionHandling
             }
             catch(IndexOutOfRangeException ex)
             {
-                Console.WriteLine("Error: Index out of R")
+                Console.WriteLine("Error: Index out of Range! Please enter a valid Index.");
+                Console.WriteLine($"Exception Details : {ex.Message}");
 
             }
+            catch(DivideByZeroException ex){
+                Console.WriteLine("Error:Cannot divide by zero");
+                Console.WriteLine($"Exception Details : {ex.Message}");
+            }
+            catch(FormatException ex){
+                Console.WriteLine("Error:Invalid input! Please enter only numbers.");
+                Console.WriteLine($"Exception Details : {ex.Message}");
+            }
             finally{
-
+                    Console.WriteLine("program execution is completed.");
             }
         }
     }
