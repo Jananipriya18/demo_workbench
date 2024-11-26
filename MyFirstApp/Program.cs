@@ -27,9 +27,7 @@ class Program
         // Find the sum of even Numbers
         Console.WriteLine("Finding the sum of even Numbers: ");
         var sumOfEvenNumbers = evenNumbers.Sum();
-        Console.WriteLine(sumOfEvenNumbers);
-
-        
+        Console.WriteLine(sumOfEvenNumbers);        
     }
 
 }
