@@ -20,6 +20,13 @@ namespace DelegateEventExample
             Console.WriteLine("Event triggered: ButtonClickHandler invoked!");
         }
 
-        static void Main(string[])
+        static void Main(string[] args)
+        {
+            Button button= new Button();
+            button.ButtonClicked +=OnButtonClicked;
+            Console.WriteLine("Press Enter to click a button.");
+            Console.ReadLine();
+            button.Click();
+        }
     }
 }
