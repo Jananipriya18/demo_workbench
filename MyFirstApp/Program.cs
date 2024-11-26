@@ -1,20 +1,11 @@
 ﻿using System;
+namespace SimpleDelegateEventDemo
+{
+    public delegate void ButtonClickHandler();
 
-class Program{
-    public static void Main()
+    class Button 
     {
-        HashSet<string> uniqueitems = new HashSet<string>
-        {
-            "Pen","Notebook","Eraser"
-        };
-        uniqueitems.Add("Pen");
-        uniqueitems.Add("Eraser");
-        uniqueitems.Add("Marker");
-
-        foreach(string item in uniqueitems)
-        {
-            Console.WriteLine(item);
-        }
         
     }
+
 }
