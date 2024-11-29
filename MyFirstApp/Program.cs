@@ -10,6 +10,25 @@ class Program
 
         // Sort the numbers in ascending order
         var sortedNumbers = numbers.OrderBy(num => num);
-        // 
+        // Filtering by Even numbers
+        var evenNumbers = sortedNumbers.Where(num=> num%2 == 0);
+        // Sum of even Numbers
+        var sumOfEvenNumbers = evenNumbers.Sum();
+
+        Console.WriteLine("Sorted even numbers:");
+        foreach(var num in evenNumbers)
+        {
+            Console.WriteLine(num);
+        }
+
+        Console.WriteLine("Ascending order");
+        foreach(var num in sortedNumbers)
+        {
+            Console.WriteLine(num);
+        }
+
+        Console.WriteLine(sumOfEvenNumbers);
+
+
     }
 }
