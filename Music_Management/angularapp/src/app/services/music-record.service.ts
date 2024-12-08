@@ -11,26 +11,26 @@ export class MusicRecordService {
 
   constructor(private http: HttpClient) { }
 
-  addPlaylist(playlist: MusicRecord): Observable<MusicRecord> { // Adjusted model type
-    return this.http.post<MusicRecord>(`${this.apiUrl}/api/Playlist`, playlist);
+  addMusicRecord(musicRecord: MusicRecord): Observable<MusicRecord> { // Adjusted model type
+    return this.http.post<MusicRecord>(`${this.apiUrl}/api/MusicRecord`, musicRecord);
   }
 
-  getPlaylists(): Observable<MusicRecord[]> { // Adjusted model type
-    return this.http.get<MusicRecord[]>(`${this.apiUrl}/api/Playlist`);
+  getMusicRecords(): Observable<MusicRecord[]> { // Adjusted model type
+    return this.http.get<MusicRecord[]>(`${this.apiUrl}/api/MusicRecord`);
   }
 
-  deletePlaylist(playlistId: number): Observable<void> {
-    const url = `${this.apiUrl}/api/Playlist/${playlistId}`; // Adjust the URL to match your API endpoint
+  deleteMusicRecord(musicRecordId: number): Observable<void> {
+    const url = `${this.apiUrl}/api/MusicRecord/${musicRecordId}`; // Adjust the URL to match your API endpoint
     return this.http.delete<void>(url);
   }
 
-  getPlaylist(playlistId: number): Observable<MusicRecord> { // Adjusted model type
-    const url = `${this.apiUrl}/api/Playlist/${playlistId}`;
+  getMusicRecord(musicRecordId: number): Observable<MusicRecord> { // Adjusted model type
+    const url = `${this.apiUrl}/api/MusicRecord/${musicRecordId}`;
     return this.http.get<MusicRecord>(url);
   }
 
-  searchPlaylists(searchTerm: string): Observable<MusicRecord[]> { // Adjusted model type
+  searchMusicRecords(searchTerm: string): Observable<MusicRecord[]> { // Adjusted model type
     const params = new HttpParams().set('searchTerm', searchTerm);
-    return this.http.get<MusicRecord[]>(`${this.apiUrl}/api/Playlist/search`, { params });
+    return this.http.get<MusicRecord[]>(`${this.apiUrl}/api/MusicRecord/search`, { params });
   }
 }

@@ -1,1 +1,41 @@
-<p>music-list works!</p>
+<div class="container">
+    <h2>Music Records List</h2>
+    
+    <div>
+      <input type="text" id="search" [(ngModel)]="searchTerm" placeholder="Search by artist or album">
+      <button id="search" class="search-button" (click)="searchMusicRecords()">Search</button>
+    </div>
+  
+    <div *ngIf="searchTerm && musicRecords.length === 0" class="error-message">
+      The searched music record does not exist.
+    </div>
+  
+    <div *ngIf="!searchTerm && musicRecords.length === 0" class="no-playlists-message">
+      No music records available.
+    </div>
+    
+    <table *ngIf="musicRecords.length > 0" class="music-records-table">
+      <thead>
+        <tr>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Genre</th>
+          <th>Price</th>
+          <th>Stock Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let musicRecord of musicRecords" class="music-record-item">
+          <td>{{ musicRecord.artist }}</td>
+          <td>{{ musicRecord.album }}</td>
+          <td>{{ musicRecord.genre }}</td>
+          <td>{{ musicRecord.price }}</td>
+          <td>{{ musicRecord.stockQuantity }}</td>
+          <td>
+            <button id="delete" class="delete-button" (click)="deleteMusicRecord(musicRecord.musicRecordId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

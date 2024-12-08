@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicRecord } from '../models/music-record.model';
+import { MusicRecordService } from '../services/music-record.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-music-form',
@@ -17,7 +20,7 @@ export class MusicFormComponent {
 
   formSubmitted = false; // Track form submission
 
-  constructor(private playlistService: PlaylistService, private router: Router) { }
+  constructor(private musicRecordService: MusicRecordService, private router: Router) { }
 
   addMusicRecord(): void {
     this.formSubmitted = true; // Set formSubmitted to true on form submission
@@ -31,9 +34,9 @@ export class MusicFormComponent {
     }
 
     // If form is valid, add the music record
-    this.playlistService.addPlaylist(this.newMusicRecord).subscribe(() => {
+    this.musicRecordService.addMusicRecord(this.newMusicRecord).subscribe(() => {
       console.log('Music record added successfully!');
-      this.router.navigate(['/viewPlaylists']);
+      this.router.navigate(['/viewMusicRecords']);
     });
   }
 }
