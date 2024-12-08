@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { DeleteConfirmComponent } from './delete-confirm/delete-confirm.component';
 import { MusicFormComponent } from './music-form/music-form.component';
 import { MusicListComponent } from './music-list/music-list.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MusicListComponent } from './music-list/music-list.component';
     HeaderComponent,
     DeleteConfirmComponent,
     MusicFormComponent,
-    MusicListComponent
+    MusicListComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
