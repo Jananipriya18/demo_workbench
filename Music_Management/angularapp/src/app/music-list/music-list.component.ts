@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./music-list.component.css']
 })
 export class MusicListComponent implements OnInit {
-  musicRecords: MusicRecord[] = []; // Changed recipes to musicRecords
+  musicRecords: MusicRecord[] = []; 
   searchTerm: string = '';
 
-  constructor(private musicRecordService: MusicRecordService, private router: Router) { } // Adjusted service name
-
+  constructor(private musicRecordService: MusicRecordService, private router: Router) { } 
   ngOnInit(): void {
     this.loadMusicRecords(); // Adjusted the method name
   }
@@ -22,7 +21,7 @@ export class MusicListComponent implements OnInit {
     this.musicRecordService.getMusicRecords().subscribe(musicRecords => this.musicRecords = musicRecords); // Adjusted the service method name
   }
 
-  deleteMusicRecord(musicRecordId: number): void { // Adjusted the method name and parameter
+  deleteMusicRecord(musicRecordId: number): void { 
     // Navigate to confirm delete page with the music record ID as a parameter
     this.router.navigate(['/confirmDelete', musicRecordId]);
   }

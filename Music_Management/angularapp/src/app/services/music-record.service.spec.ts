@@ -24,8 +24,8 @@ describe('MusicRecordService', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('MusicRecordService_should_add_a_playlist_and_return_it', () => {
-    const mockPlaylist: MusicRecord = {
+  fit('MusicRecordService_should_add_a_music_record_and_return_it', () => {
+    const mockMusicRecord: MusicRecord = {
       musicRecordId: 100,
       artist: 'Test Artist',
       album: 'Test Album',
@@ -34,17 +34,17 @@ describe('MusicRecordService', () => {
       stockQuantity: 100
     };
 
-    service.addPlaylist(mockPlaylist).subscribe((event) => {
-      expect(event).toEqual(mockPlaylist);
+    service.addMusicRecord(mockMusicRecord).subscribe((event) => {
+      expect(event).toEqual(mockMusicRecord);
     });
 
-    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/Playlist`); // Adjusted API endpoint
+    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/MusicRecord`); // Adjusted API endpoint
     expect(req.request.method).toBe('POST');
-    req.flush(mockPlaylist);
+    req.flush(mockMusicRecord);
   });
 
-  fit('MusicRecordService_should_get_playlists', () => {
-    const mockPlaylists: MusicRecord[] = [
+  fit('MusicRecordService_should_get_music_records', () => {
+    const mockMusicRecords: MusicRecord[] = [
       {
         musicRecordId: 100,
         artist: 'Test Artist',
@@ -55,30 +55,30 @@ describe('MusicRecordService', () => {
       }
     ];
 
-    service.getPlaylists().subscribe((events) => {
-      expect(events).toEqual(mockPlaylists);
+    service.getMusicRecords().subscribe((events) => {
+      expect(events).toEqual(mockMusicRecords);
     });
 
-    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/Playlist`); // Adjusted API endpoint
+    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/MusicRecord`); // Adjusted API endpoint
     expect(req.request.method).toBe('GET');
-    req.flush(mockPlaylists);
+    req.flush(mockMusicRecords);
   });
 
-  fit('MusicRecordService_should_delete_playlist', () => {
+  fit('MusicRecordService_should_delete_music_record', () => {
     const musicRecordId = 100;
 
-    service.deletePlaylist(musicRecordId).subscribe(() => {
+    service.deleteMusicRecord(musicRecordId).subscribe(() => {
       expect().nothing();
     });
 
-    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/Playlist/${musicRecordId}`); // Adjusted API endpoint
+    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/MusicRecord/${musicRecordId}`); // Adjusted API endpoint
     expect(req.request.method).toBe('DELETE');
     req.flush({});
   });
 
-  fit('MusicRecordService_should_get_playlist_by_id', () => {
+  fit('MusicRecordService_should_get_music_record_by_id', () => {
     const musicRecordId = 100;
-    const mockPlaylist: MusicRecord = {
+    const mockMusicRecord: MusicRecord = {
       musicRecordId: musicRecordId,
       artist: 'Test Artist',
       album: 'Test Album',
@@ -87,17 +87,17 @@ describe('MusicRecordService', () => {
       stockQuantity: 100
     };
 
-    service.getPlaylist(musicRecordId).subscribe((event) => {
-      expect(event).toEqual(mockPlaylist);
+    service.getMusicRecord(musicRecordId).subscribe((event) => {
+      expect(event).toEqual(mockMusicRecord);
     });
 
-    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/Playlist/${musicRecordId}`); // Adjusted API endpoint
+    const req = httpTestingController.expectOne(`${service['apiUrl']}/api/MusicRecord/${musicRecordId}`); // Adjusted API endpoint
     expect(req.request.method).toBe('GET');
-    req.flush(mockPlaylist);
+    req.flush(mockMusicRecord);
   });
 
-  fit('MusicRecordService_should_search_playlistnames', () => {
-    const mockPlaylists: MusicRecord[] = [
+  fit('MusicRecordService_should_search_music_records', () => {
+    const mockMusicRecords: MusicRecord[] = [
       {
         musicRecordId: 100,
         artist: 'Test Artist',
@@ -110,17 +110,17 @@ describe('MusicRecordService', () => {
   
     const searchTerm = 'Test Album';
   
-    service.searchPlaylists(searchTerm).subscribe((playlists) => {
-      expect(playlists).toEqual(mockPlaylists);
+    service.searchMusicRecords(searchTerm).subscribe((musicRecords) => {
+      expect(musicRecords).toEqual(mockMusicRecords);
     });
   
     const req = httpTestingController.expectOne((request) => 
-      request.url.includes(`${service['apiUrl']}/api/Playlist/search`) && 
+      request.url.includes(`${service['apiUrl']}/api/MusicRecord/search`) && 
       request.params.get('searchTerm') === searchTerm
     );
   
     expect(req.request.method).toBe('GET');
-    req.flush(mockPlaylists);
+    req.flush(mockMusicRecords);
   }); 
   
 });

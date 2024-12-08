@@ -12,7 +12,7 @@ import { MusicRecord } from '../models/music-record.model'; // Corrected model n
 describe('MusicFormComponent', () => {
   let component: MusicFormComponent;
   let fixture: ComponentFixture<MusicFormComponent>;
-  let playlistService: MusicRecordService;
+  let MusicRecordService: MusicRecordService;
   let router: Router;
 
   beforeEach(async () => {
@@ -26,7 +26,7 @@ describe('MusicFormComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MusicFormComponent); // Corrected component name
     component = fixture.componentInstance;
-    playlistService = TestBed.inject(MusicRecordService); // Corrected service name
+    MusicRecordService = TestBed.inject(MusicRecordService); // Corrected service name
     router = TestBed.inject(Router);
     fixture.detectChanges();
   });
