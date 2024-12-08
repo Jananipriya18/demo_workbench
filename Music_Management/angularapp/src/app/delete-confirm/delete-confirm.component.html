@@ -1,0 +1,15 @@
+<div class="container" *ngIf="musicRecord">
+    <h2>Delete Confirmation</h2>
+    <div class="confirmation-message">
+      <p>Are you sure you want to delete this music record?</p>
+      <p>Artist: {{ musicRecord.artist }}</p>
+      <p>Album: {{ musicRecord.album }}</p>
+      <p>Genre: {{ musicRecord.genre }}</p>
+      <p>Price: {{ musicRecord.price }}</p>
+      <p>Stock Quantity: {{ musicRecord.stockQuantity }}</p>
+    </div>
+    <div class="form-buttons">
+      <button type="button" id="confirm" class="confirm-button" (click)="confirmDelete(musicRecord.musicRecordId)">Confirm Delete</button>
+      <button type="button" id="cancel" class="cancel-button" (click)="cancelDelete()">Cancel</button>
+    </div>
+  </div>
