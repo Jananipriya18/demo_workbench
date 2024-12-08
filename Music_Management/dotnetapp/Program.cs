@@ -25,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
         {
             options.AddDefaultPolicy(builder =>
             {
-                builder.AllowAnyOrigin()
+                builder.AllowAnyOrigin() 
                        .AllowAnyHeader()
                        .AllowAnyMethod();
             });
@@ -42,9 +42,10 @@ var builder = WebApplication.CreateBuilder(args);
 
         app.UseHttpsRedirection();
 
+        app.UseCors(); // This line enables CORS
+
         app.UseAuthorization();
 
-        app.UseCors(); // This line enables CORS
 
         app.MapControllers();
 
