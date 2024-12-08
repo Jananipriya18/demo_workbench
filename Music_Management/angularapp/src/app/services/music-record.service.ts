@@ -7,7 +7,7 @@ import { MusicRecord } from '../models/music-record.model'; // Adjusted model im
   providedIn: 'root'
 })
 export class MusicRecordService {
-  private apiUrl = 'https://8080-aabdbffdadabafcfd316270188cbdabfbfeaeacaone.premiumproject.examly.io'; // Replace this with your API endpoint
+  private apiUrl = 'https://8080-bdfbfecbcdadbb320699766ebabbcadeeefceacone.premiumproject.examly.io'; // Replace this with your API endpoint
 
   constructor(private http: HttpClient) { }
 

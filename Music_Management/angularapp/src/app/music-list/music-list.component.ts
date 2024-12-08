@@ -19,7 +19,7 @@ export class MusicListComponent implements OnInit {
   }
 
   loadMusicRecords(): void {
-    this.musicRecordService.getPlaylists().subscribe(musicRecords => this.musicRecords = musicRecords); // Adjusted the service method name
+    this.musicRecordService.getMusicRecords().subscribe(musicRecords => this.musicRecords = musicRecords); // Adjusted the service method name
   }
 
   deleteMusicRecord(musicRecordId: number): void { // Adjusted the method name and parameter
@@ -28,7 +28,7 @@ export class MusicListComponent implements OnInit {
   }
   searchMusicRecords(): void {
     if (this.searchTerm) {
-      this.musicRecordService.searchPlaylists(this.searchTerm).subscribe(musicRecords => this.musicRecords = musicRecords);
+      this.musicRecordService.searchMusicRecords(this.searchTerm).subscribe(musicRecords => this.musicRecords = musicRecords);
     } else {
       this.loadMusicRecords();
     }
