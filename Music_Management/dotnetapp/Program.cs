@@ -11,8 +11,8 @@ using dotnetapp.Services;
 var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        // builder.Services.AddDbContext<ApplicationDbContext>(options =>
-        //     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
+            // builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            //     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
 
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
