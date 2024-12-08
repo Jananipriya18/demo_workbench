@@ -8,8 +8,8 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
+    "": "node",
+    "impormoduleResolutiontHelpers": true,
     "target": "es2015",
     "module": "es2020",
     "lib": [
