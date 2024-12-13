@@ -1,0 +1,163 @@
+/* PlanApproval.css */
+
+#parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+#planApprovalBody {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#searchBox {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#filter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#filter select {
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.plan-approval-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.plan-approval-table th,
+.plan-approval-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.plan-approval-table th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.plan-approval-table td {
+  background-color: #fff;
+}
+
+.plan-approval-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.no-records {
+  text-align: center;
+  font-size: 1.2em;
+  color: #888;
+}
+
+.greenButton,
+.redButton {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.greenButton {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.redButton {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.greenButton:hover {
+  background-color: #218838;
+}
+
+.redButton:hover {
+  background-color: #c82333;
+}
+
+.viewplansbutton {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.viewplansbutton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.viewplansbutton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  #planApprovalBody {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .plan-approval-table th,
+  .plan-approval-table td {
+    padding: 10px;
+  }
+
+  #searchBox,
+  #filter select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .greenButton,
+  .redButton {
+    margin-bottom: 10px;
+  }
+
+  .viewplansbutton {
+    width: 100%;
+  }
+}

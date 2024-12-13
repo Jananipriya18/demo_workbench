@@ -1,0 +1,125 @@
+/* General styles */
+body, h1, input, table, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#savingsPlanHomeBody {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0c3c95;
+}
+
+input#searchBox {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.savings-plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.savings-plan-table th, .savings-plan-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.savings-plan-table th {
+  background-color: #f4f4f4;
+}
+
+.savings-plan-table td {
+  background-color: #fff;
+}
+
+.savings-plan-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.viewallsavingsplansbutton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.viewallsavingsplansbutton:hover {
+  background-color: #2980b9;
+}
+
+#greenButton {
+  background-color: #27ae60;
+}
+
+#greenButton:hover {
+  background-color: #229954;
+}
+
+.sortButtons {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin: 0 0.25rem;
+}
+
+.sortButtons:hover {
+  background-color: #2980b9;
+}
+
+.no-records-cell {
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+button:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.pagination-controls button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.pagination-controls button:hover {
+  background-color: #2980b9;
+}
+
+.pagination-controls button:disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}

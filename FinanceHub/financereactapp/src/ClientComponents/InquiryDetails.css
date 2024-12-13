@@ -1,0 +1,100 @@
+.inquiry-details-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .inquiry-details-container {
+    position: relative;
+  }
+  
+  .inquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inquiry-table th, .inquiry-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .inquiry-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .delete-inquiry-button4 {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-inquiry-button4:hover {
+    background-color: darkred;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .delete-popup4, .success-message {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .confirm-delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-delete-button:hover {
+    background-color: darkred;
+  }
+  
+  .cancel-delete-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-delete-button:hover {
+    background-color: darkgray;
+  }
+  
+  .success-message button {
+    background-color: #0c3c95;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .success-message button:hover {
+    background-color: #0a2c6a;
+  }
+  
+  .blur {
+    filter: blur(5px);
+  }
+  

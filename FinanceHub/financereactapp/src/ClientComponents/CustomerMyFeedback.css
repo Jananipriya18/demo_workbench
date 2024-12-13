@@ -1,0 +1,187 @@
+/* Wrapper for the feedback section */
+.my-feedback-wrapper {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container for the feedback table and messages */
+.my-feedback-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  position: relative;
+  transition: filter 0.3s ease;
+}
+
+/* Blur effect when a popup is active */
+.my-feedback-container.blur {
+  filter: blur(5px);
+}
+
+/* Heading for the feedback section */
+.my-feedback-container h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+/* Feedback table styles */
+.feedback-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.feedback-table th, .feedback-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.feedback-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.feedback-table td {
+  color: #555;
+  font-size: 14px;
+}
+
+.feedback-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Delete button styles */
+.delete-feedback-button {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-feedback-button:hover {
+  background-color: #d32f2f;
+}
+
+.popup-overlay {
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background: rgba(0, 0, 0, 0.6);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it sits above other content */
+}
+.delete-popup {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 300px;
+  margin-top: 30%;
+  margin-left: 50%;
+}
+
+/* Align text at the top */
+.delete-popup p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px; /* Space between text and buttons */
+}
+
+/* Confirmation and cancel buttons */
+.confirm-delete-button,
+.cancel-delete-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 10%;
+  margin-top:10%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-delete-button {
+  background-color: #f44336;
+}
+
+.confirm-delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.cancel-delete-button:hover {
+  background-color: #388e3c;
+}
+
+/* Success message popup */
+.success-message {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin-left: 50%;
+}
+
+.success-message p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.success-message button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.success-message button:hover {
+  background-color: #388e3c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .my-feedback-wrapper {
+      padding: 10px;
+  }
+
+  .my-feedback-container h2 {
+      font-size: 22px;
+  }
+
+  .feedback-table th, .feedback-table td {
+      padding: 10px 12px;
+      font-size: 14px;
+  }
+
+  .delete-feedback-button, .confirm-delete-button, .cancel-delete-button, .success-message button {
+      padding: 8px 14px;
+      font-size: 14px;
+  }
+
+  .delete-popup, .success-message {
+      padding: 20px;
+      max-width: 90%;
+  }
+}

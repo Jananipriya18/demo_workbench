@@ -1,0 +1,231 @@
+{
+    "Routes": [
+        {
+            "DownStreamPathtemplate": "/api/ms/planapplications",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/planapplications",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/planapplications/{applicationId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/planapplications/{applicationId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/planapplications/user/{userId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/planapplications/user/{userId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/inquiries",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/inquiries",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/inquiries/{inquiryId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/inquiries/{inquiryId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/inquiries/user/{userId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/inquiries/user/{userId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/register",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/register",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/login",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8079
+                }
+            ],
+            "UpstreamPathTemplate": "/api/login",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+
+        {
+            "DownStreamPathtemplate": "/api/ms/feedback",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8078
+                }
+            ],
+            "UpstreamPathTemplate": "/api/feedback",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        }, {
+            "DownStreamPathtemplate": "/api/ms/feedback/{feedbackId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8078
+                }
+            ],
+            "UpstreamPathTemplate": "/api/feedback/{feedbackId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/feedback/user/{userId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8078
+                }
+            ],
+            "UpstreamPathTemplate": "/api/feedback/user/{userId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/notifications",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8077
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/notifications/{notificationId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8077
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications{notificationId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        {
+            "DownStreamPathtemplate": "/api/ms/savingsplans",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8076
+                }
+            ],
+            "UpstreamPathTemplate": "/api/savingsplans",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        },
+        
+        {
+            "DownStreamPathtemplate": "/api/ms/savingsplans/{savingsPlanId}",
+            "DownStreamScheme": "http",
+            "DownStreamHostAndPorts": [
+                {
+                    "host": "localhost",
+                    "port": 8076
+                }
+            ],
+            "UpstreamPathTemplate": "/api/savingsplans/{savingsPlanId}",
+            "UpstreamHttpMethod": ["GET","POST","PUT","DELETE"],
+            "routeIsCaseSensititve": false,
+            "DownStreamHttpVersion": "2.0",
+            "DangerousAcceptAnyServerCertificate": false
+        }
+        
+    ]
+}

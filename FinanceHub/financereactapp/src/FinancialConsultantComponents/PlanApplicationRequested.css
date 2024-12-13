@@ -1,0 +1,129 @@
+/* PlanApplicationApproval.css */
+
+#parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  #applicationHomeBody {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #searchBox {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 20px;
+  }
+  
+  #filter {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  #filter select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .application-table th, .application-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .application-table th {
+    background-color: #0c3c95;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .application-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .application-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .no-records-cell {
+    text-align: center;
+    color: #888;
+    padding: 20px;
+  }
+  
+  .viewapplicationbutton {
+    background-color: #0c3c95;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 5px;
+  }
+  
+  .viewapplicationbutton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .viewapplicationbutton:hover:not(:disabled) {
+    background-color: #074076;
+  }
+  
+  /* Pagination buttons styling */
+  .pagination {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
+    background-color: #0c3c95;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Optional hover effect on table rows */
+  .application-table tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  
